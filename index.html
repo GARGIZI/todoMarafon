@@ -15,28 +15,32 @@
 <body>
 
   <div class="todo">
-    <div class="high">
       <div class="high-title">
         high
       </div>
-      <form class="high-input">
-        <input type="text" placeholder="Добавить важных дел" data-prior='#high'>
-        <input type="submit" class="btn" value="">       
-      </form>
-      <div class="high-list" id='high'>
+      <div class="high">
+        <form class="high-input">
+          <input type="text" placeholder="Добавить важных дел" maxlength="35">
+          <input type="submit" class="btn" value="">       
+        </form>
+        <div class="block">
+            <input type="checkbox" class="checkbox-input">
+            <input type="submit" value="" class="delete-block">
+            <p class="text"></p>
+        </div>
       </div>
-    </div>
 
-    <div class="low">
-      <div class="low-title">
-        low
+      <div class="low">
+        <div class="low-title">
+          low
+        </div>
+        <div class="low">
+          <form class="low-input">
+            <input type="text" placeholder="Добавить важных дел" maxlength="35">
+            <input type="submit" class="btn" value="">       
+          </form>
+        </div>
       </div>
-      <form class="low-input">
-        <input type="text" placeholder="Добавить" data-prior='#low'>
-        <input type="submit" class="btn" value="">            
-      </form>
-      <div class="low-list" id='low'></div>
-    </div>
   </div>
 
   <script type='module' src="./js/main.js"></script>

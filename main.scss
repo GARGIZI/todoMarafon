@@ -143,8 +143,8 @@ input:focus {
     content: ' ';
     background: url(../img/delete-icon.svg) no-repeat;
     background-size: cover;
-    width: 21px;
-    height: 21px;
+    width: 18px;
+    height: 18px;
     position: absolute;
     top: 50%;
     right: 15px;
@@ -178,6 +178,8 @@ input[type='checkbox'] {
 }
 
 .text {
+  width: 100%;
+  overflow: hidden;
   font-size: $fontSize;
   line-height: $lineHeight;
   color: #202020;

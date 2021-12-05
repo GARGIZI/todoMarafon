@@ -1,84 +1,39 @@
-const highInput = document.querySelector('.high-input input');
-const lowInput = document.querySelector('.low-input input');
-const iconAddHigh = document.querySelector('.high-input .btn');
-const iconAddLow = document.querySelector('.low-input .btn');
-const highList = document.querySelector('.high-list');
-const lowList = document.querySelector('.low-list');
+import {ADD_TASK,} from './view.js';
 
-let id = 0;
+const block = document.querySelector('.block');
+block.remove();
 
-const createTaskHigh = (event) => {
-  event.preventDefault();
-  let valueHigh = highInput.value;
-  let idCurrentHigh = highInput.getAttribute('data-prior');
-  let currentHigh = document.querySelector(idCurrentHigh);
+function deleteBlock() {
+  this.parentElement.remove();
+}
 
-  id++;
-
-  if (valueHigh != '') {
-    currentHigh.insertAdjacentHTML('afterbegin', `
-    <form class='block' id='${id}'>
-      <div class='block-input'>
-        <input type='checkbox' class='check'>
-      </div>
-      <div class='text'>
-        ${valueHigh}
-      </div>
-      <input type='submit' id='${id}' class='btnClose' value=''>
-    </form>
-  `);
+function checkBlock() {
+  this.parentElement.classList.toggle('checked');
+  if (this.parentElement.classList.contains('checked')) {
+    this.parentElement.style.backgroundColor = '#f4f4f4';
+  } else {
+    this.parentElement.style.backgroundColor = '#fff';
   }
+}
 
-  const btnsClose = document.querySelectorAll('.btnClose');
-  btnsClose.forEach((item) => {
-    item.addEventListener('click', (event) => {
-      event.preventDefault();
-      for (let child = 0; child < currentHigh.children.length; child++) {
-        if (currentHigh.children[child].id == item.id) {
-          currentHigh.children[child].classList.add('hidden');
-          id--;
-        }
-      }
-    });
-  });
+function addTask(event) {
+  event.preventDefault();
+  const copyElement = block.cloneNode(true);
+  const deletInput = copyElement.querySelector('.delete-block');
+  const checkInput = copyElement.querySelector('.checkbox-input');
+  const text = copyElement.querySelector('.text');
+
+  checkInput.addEventListener('click', checkBlock);
+  deletInput.addEventListener('click', deleteBlock);
+
+  text.innerHTML = this.parentElement.parentElement.firstElementChild.firstElementChild.value;
+  if (this.parentElement.parentElement.firstElementChild.firstElementChild.value == '') {
+    return;
+  } 
+  this.parentElement.parentElement.firstElementChild.firstElementChild.value = '';
+  this.parentElement.parentElement.append(copyElement);
 };
 
-const createTaskLow = (event) => {
-  event.preventDefault();
-  let valueLow = lowInput.value;
-  let idCurrent = lowInput.getAttribute('data-prior');
-  let currentLow = document.querySelector(idCurrent);
-
-  id++;
-
-  if (valueLow != '') {
-    currentLow.insertAdjacentHTML('afterbegin', `
-    <form class='block' id='${id}'>
-      <div class='block-input'>
-        <input type='checkbox' class='check'>
-      </div>
-      <div class='text'>
-        ${valueLow}
-      </div>
-      <input type='submit' id='${id}' class='btnClose' value=''>
-    </form>
-  `);
-  }
-
-  const btnsClose = document.querySelectorAll('.btnClose');
-  btnsClose.forEach((item) => {
-    item.addEventListener('click', (event) => {
-      event.preventDefault();
-      for (let child = 0; child < currentLow.children.length; child++) {
-        if (currentLow.children[child].id == item.id) {
-          currentLow.children[child].classList.add('hidden');
-          id--;
-        }
-      }
-    });
-  });
-};
-
-iconAddHigh.addEventListener('click', createTaskHigh);
-iconAddLow.addEventListener('click', createTaskLow);
-
+ADD_TASK.forEach(function(item) {
+  item.addEventListener('click', addTask);
+});

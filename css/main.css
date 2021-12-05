@@ -170,8 +170,8 @@ input:focus {
   content: ' ';
   background: url(../img/delete-icon.svg) no-repeat;
   background-size: cover;
-  width: 21px;
-  height: 21px;
+  width: 18px;
+  height: 18px;
   position: absolute;
   top: 50%;
   right: 15px;
@@ -209,6 +209,8 @@ input[type='checkbox']:checked::after {
 }
 
 .text {
+  width: 100%;
+  overflow: hidden;
   font-size: 18px;
   line-height: 21.09px;
   color: #202020;
