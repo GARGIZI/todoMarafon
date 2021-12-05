@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>todo</title>
+</head>
+
+<body>
+
+  <div class="todo">
+    <div class="high">
+      <div class="high-title">
+        high
+      </div>
+      <form class="high-input">
+        <input type="text" placeholder="Добавить важных дел" data-prior='#high'>
+        <input type="submit" class="btn" value="">       
+      </form>
+      <div class="high-list" id='high'>
+      </div>
+    </div>
+
+    <div class="low">
+      <div class="low-title">
+        low
+      </div>
+      <form class="low-input">
+        <input type="text" placeholder="Добавить" data-prior='#low'>
+        <input type="submit" class="btn" value="">            
+      </form>
+      <div class="low-list" id='low'></div>
+    </div>
+  </div>
+
+  <script type='module' src="./js/main.js"></script>
+</body>
+
+</html>

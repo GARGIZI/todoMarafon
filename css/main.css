@@ -1,0 +1,216 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.todo {
+  padding: 25px 8px;
+  width: 480px;
+  margin: 0 auto;
+}
+
+input:focus {
+  outline: none;
+}
+
+.high-title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.09px;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.high-input {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.high-input input[type='text'] {
+  width: 100%;
+  height: 45px;
+  padding-left: 12px;
+  border: 1px solid #989898;
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 21.09px;
+  color: #202020;
+}
+
+.high-input input[type='text']::-webkit-input-placeholder {
+  font-size: 18px;
+  line-height: 21.09px;
+  color: #BBBBBB;
+}
+
+.high-input input[type='text']:-ms-input-placeholder {
+  font-size: 18px;
+  line-height: 21.09px;
+  color: #BBBBBB;
+}
+
+.high-input input[type='text']::-ms-input-placeholder {
+  font-size: 18px;
+  line-height: 21.09px;
+  color: #BBBBBB;
+}
+
+.high-input input[type='text']::placeholder {
+  font-size: 18px;
+  line-height: 21.09px;
+  color: #BBBBBB;
+}
+
+.high-input input[type='submit'] {
+  content: ' ';
+  background: url(../img/add-icon.svg) no-repeat;
+  background-size: cover;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  border: none;
+}
+
+.low {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.low-title {
+  font-size: 18px;
+  line-height: 21.09px;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.low-input {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.low-input input[type='text'] {
+  width: 100%;
+  height: 45px;
+  padding-left: 12px;
+  border: 1px solid #989898;
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 21.09px;
+  color: #202020;
+}
+
+.low-input input[type='text']::-webkit-input-placeholder {
+  font-size: 18px;
+  line-height: 21.09px;
+  color: #BBBBBB;
+}
+
+.low-input input[type='text']:-ms-input-placeholder {
+  font-size: 18px;
+  line-height: 21.09px;
+  color: #BBBBBB;
+}
+
+.low-input input[type='text']::-ms-input-placeholder {
+  font-size: 18px;
+  line-height: 21.09px;
+  color: #BBBBBB;
+}
+
+.low-input input[type='text']::placeholder {
+  font-size: 18px;
+  line-height: 21.09px;
+  color: #BBBBBB;
+}
+
+.low-input input[type='submit'] {
+  content: ' ';
+  background: url(../img/add-icon.svg) no-repeat;
+  background-size: cover;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  border: none;
+}
+
+.block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 14px 45px;
+  margin-bottom: 8px;
+  border: 1px solid #989898;
+  border-radius: 6px;
+  position: relative;
+}
+
+.block.hidden {
+  display: none;
+}
+
+.block input[type='submit'] {
+  content: ' ';
+  background: url(../img/delete-icon.svg) no-repeat;
+  background-size: cover;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  border: none;
+  cursor: pointer;
+}
+
+input[type='checkbox'] {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: 12px;
+  left: 12px;
+  border: 1px solid #989898;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+}
+
+input[type='checkbox']:checked::after {
+  content: ' ';
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin: auto;
+  background: #c4c4c4;
+  border-radius: 100%;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 21.09px;
+  color: #202020;
+}
+/*# sourceMappingURL=main.css.map */
